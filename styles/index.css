@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/restaurant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+h1{
+    font-family: sans-serif;
+    font-weight: bolder;
+
+
+}
+
+input{
+    width: 60%;
+    height: 40px;
+    box-sizing: border-box;
+    color: lightgreen;
+    background-color: orangered;
+    border: none;
+    background-size: 10px;
+    border-radius: 8px;
+}
+
+input:hover{
+    cursor: pointer;
+    background-color: rgb(0, 82, 2);
+}
+
+section {
+    background-color: rgba(97, 51, 30, 0.822);
+    width: 396px;
+    height: 60mm;
+    box-shadow: 0 2px 4px rgba(31, 13, 1, 0.945), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box; 
+    padding: 20px 0 30px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 50%;
+
+}
