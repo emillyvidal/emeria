@@ -19,11 +19,7 @@
   <header>
 
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-
-      </div>
+      <li><a href="configuracoes.html"> Login </a></li>
     </div>
     <nav class="navbar col- navbar-sm fixed-top navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,82 +28,84 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand brand" href="#">Eméria</a>
+        <div id="logo">
+          <a class="navbar-brand brand" href="#">Eméria</a>
+        </div>
         <div class="menu">
           <a class="navbar-text text-decoration-none px-3 mb-1" href="#">Minha comanda</a>
-          <a class="navbar-text text-decoration-none px-3" href="#">Meu pedido</a>
+          <a class="navbar-text text-decoration-none px-3 mb-2" href="#">Meu pedido</a>
         </div>
       </div>
     </nav>
-    <div class="navbar-brand brand">
-      <h1> Eméria </h1>
-    </div>
-    <ul id="cabecalho">
-      <a href="#">
-        <li>Minha Comanda</li>
-      </a>
-      <a href="#">
-        <li>Meu Pedido</li>
-      </a>
-    </ul>
   </header>
-<div id="pagina">
-  <div style="height: 500px;width: 200px; background-color: rgb(132, 14, 201); float: left;">
-    <a id="destaque" href="#">Destaques</a><br>
-    <a id="cardapio" href="#">Cardápio</a><br>
-    <a id="promocoes" href="#">Promoções</a>
-</div>
 
-<div id="conteudo" style="height: 500px; background-color: rgb(180, 150, 197);">
-    <div id="desta">
-        <h2>Destaques:</h2>
-            
+
+  <section id="box">
+    <div class="menu_esquerda">
+        <a class="btn btn-destaques" onclick="carregar('destaques.html')" href="destaques.html">
+          <h2>Destaques</h2>
+        </a>
+        <a class="btn btn-cardapio" data-bs-toggle="collapse" href="#collapse2" role="button" aria-controls="collapseWidth2">
+          <h2>Cardápio</h2>
+        </a>
+      </div>
+  
+      </div>
+    <div class="conteudo_menu">
+      <div class="collapse collapse-horizontal" id="collapse2">
+          <Ul>
+            <a href="#">
+              <li> Porções </li>
+            </a>
+            <a href="#">
+              <li> Drinks </li>
+            </a>
+            <a href="#">
+              <li> Pizzas </li>
+            </a>
+            <a href="#">
+              <li> Lanches </li>
+            </a>
+            <a href="#">
+              <li> Bebidas </li>
+            </a>
+    
+          </Ul>
+      </div>
+  
     </div>
-    <div id="card">
-        <h2>Cardápio:</h2>
-        <Ul>
-          <a href="#"><li> Porções </li></a>
-          <a href="#"><li> Drinks </li></a>
-          <a href="#"><li> Pizzas </li></a>
-          <a href="#"><li> Lanches </li></a>
-
-        </Ul>
+  
+    <div class="terceiracoluna">
+      <h1>Item</h1>
     </div>
-    <div id="promo">
-      <h2>Promoções:</h2>
-      aqui os itens do destaque
-    </div>
-</div>
 
-<script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </section>
 
-<script>
-    $(document).ready(function() {
-        $("#desta").hide(); // não se faz
+  <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#desta").hide(); // não se faz
+      $("#card").hide();
+      $("#card").hide();
+
+      $("#cardapio").click(function () {
+        $("#desta").hide();
+        $("#card").show();
+      });
+
+      $("#destaque").click(function () {
         $("#card").hide();
-        $("#card").hide();
+        $("#desta").show();
+      });
+      });
+  </script>
+  </div>
+  </div>
 
-        $("#cardapio").click(function() {
-            $("#desta").hide();
-            $("#promo").hide();
-            $("#card").show();
-        });
-
-        $("#destaque").click(function() {
-            $("#card").hide();
-            $("#promo").hide();
-            $("#desta").show();
-        });
-        $("#promocoes").click(function() {
-            $("#card").hide();
-            $("#promo").show();
-        });
-    })
-</script>
-</div>
-</div>
-
-    <script src="./scripts/sidebar.js"></script>
+  <script src="./scripts/sidebar.js"></script>
 </body>
 
 </html>

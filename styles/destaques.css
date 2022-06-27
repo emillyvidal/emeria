@@ -1,0 +1,35 @@
+.body{
+    background-color: #212529;
+    margin-top: 50px;
+
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.carousel-item a{
+    list-style: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 5;
+    color: #212529;
+    margin-left: 25px ;
+    text-decoration: none;
+}
+
+.carousel-indicators{
+    margin-right: auto !important;
+    margin-bottom: 90px !important;
+    margin-left: 15px !important;
+}
+
+.absoluto {
+    position: absolute;
+    top: 20px;
+    right: 3px;
+ }
+
+ .w-100 {
+    width: 60px !important;
+    margin-top: 35px;
+}
